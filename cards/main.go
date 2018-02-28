@@ -1,10 +1,12 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	cards := newDeck()
-	fmt.Println(cards.toString())
+	cards := newDeckFromFile("my_cards")
+	fmt.Println("Not Shuffled:")
+	cards.print()
+	cards.shuffle()
+	fmt.Println("Shuffled:")
+	cards.print()
 }
